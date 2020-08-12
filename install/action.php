@@ -3,7 +3,7 @@ header("Access-Control-Allow-Origin: *");
 //header('X-PHP-Response-Code: 501', true, 501);
 //die;
 
-include 'DB.php';
+include 'db.php';
 $db = new DB();
 $tblName = 'users';
 

@@ -1,0 +1,62 @@
+<!-- <!-- <p>Type 'correct' to validate.</p>
+<form action="javascript:alert( 'success!' );">
+  <div>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="submit">
+  </div>
+</form>
+<span></span>
+<script>
+    $( "form" ).submit(function( event ) {
+      if ( $( "input" ).first().val() === "correct" ) {
+        $( "span" ).text( "Validated..." ).show();
+        return;
+      }
+     
+      $( "span" ).text( "Not valid!" ).show().fadeOut( 1000 );
+      event.preventDefault();
+    });
+    </script> -->
+
+    <!-- Our example form 
+    <form action="submit.php" id="example_form">
+        <label>
+            Your Email Address:
+            <input type="text" name="email_address">
+        </label>
+        <br>
+        <button type="button" id="submit_form">Submit</button>
+    </form>
+
+     Include JQuery 
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        //When the document is ready.
+        $(document).ready(function(){
+            //Attach a CLICK event handler to our #submit_form button.
+            $("#submit_form").click(function(){
+                //If the user clicks on the button, then submit
+                //the form.
+                $("#example_form").submit();
+            });
+        });
+    </script> -->
+
+    <div class="container">
+        <div class="main">
+        <form action="#" method="post" name="form_name" id="form_id" class="form_class" >
+        <h2>Javascript Form Submit Example</h2>
+        <label>Name :</label>
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <label>Email :</label>
+        <input type="text" name="email" id="email" placeholder="Valid Email" />
+        <input type="button" name="submit_id" id="btn_id" value="Submit by Id" onclick="submit_by_id()"/>
+        <input type="button" name="submit_name" id="btn_name" value="Submit by Name" onclick="submit_by_name()"/>
+        <input type="button" name="submit_class" id="btn_class" value="Submit by Class" onclick="submit_by_class()"/>
+        <input type="button" name="submit_tag" id="btn_tag" value="Submit by Tag" onclick="submit_by_tag()"/>
+        </form>
+        </div>
+        </div>
