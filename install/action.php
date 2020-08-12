@@ -27,6 +27,6 @@ if(!empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['email']))
                 $data['status'] = 'ERR';
                 $data['msg'] = 'You must include the data to be inserted.';
             }
-            echo json_encode($data);
+            echo json_encode($_POST['name']);
 
             
