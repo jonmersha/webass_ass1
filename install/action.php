@@ -5,7 +5,8 @@ header("Access-Control-Allow-Origin: *");
 
 include 'db.php';
 $db = new DB();
-$tblName = 'users';
+$tblName = 'act_users';
+
 
 if(!empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['email'])){
                 $userData = array(
@@ -13,6 +14,10 @@ if(!empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['email']))
                     'email' => $_POST['email'],
                     'phone' => $_POST['phone']
                 );
+
+                echo json_encode($userData);
+
+
 				
 				$insert = $db->insert($tblName,$userData);
                 if($insert){
@@ -27,6 +32,6 @@ if(!empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['email']))
                 $data['status'] = 'ERR';
                 $data['msg'] = 'You must include the data to be inserted.';
             }
-            echo json_encode($_POST['name']);
+            echo json_encode($data);
 
             
