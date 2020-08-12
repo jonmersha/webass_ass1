@@ -5,7 +5,7 @@ header("Access-Control-Allow-Origin: *");
 
 include 'db.php';
 $db = new DB();
-$tblName = 'act_users';
+$tblName = 'users.act_user';
 
 
 if(!empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['email'])){
